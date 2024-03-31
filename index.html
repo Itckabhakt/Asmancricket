@@ -1,1 +1,77 @@
-<html><head><title>Star channel</title><meta name="robots" content="noindex"><meta content='width=device-width, initial-scale=1' name='viewport'> <meta http-equiv="Content-Language" content="es" /> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <body style="padding: 0px; margin:0px;"><body><meta name='referrer' content='no-referrer' /><script src="//ssl.p.jwpcdn.com/player/v/8.25.8/jwplayer.js"></script><script>jwplayer.key = "XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo"</script><div id="player"></div><srcipt src="final.js"></srcipt></body></html>
+<script>const head = document.createElement('head');
+const title = document.createElement('title');
+title.textContent = 'Telegram-Finally-Live';
+head.appendChild(title);
+
+const metaRobots = document.createElement('meta');
+metaRobots.setAttribute('name', 'robots');
+metaRobots.setAttribute('content', 'noindex');
+head.appendChild(metaRobots);
+
+const metaViewport = document.createElement('meta');
+metaViewport.setAttribute('name', 'viewport');
+metaViewport.setAttribute('content', 'width=device-width, initial-scale=1');
+head.appendChild(metaViewport);
+
+const metaContentLanguage = document.createElement('meta');
+metaContentLanguage.setAttribute('http-equiv', 'Content-Language');
+metaContentLanguage.setAttribute('content', 'es');
+head.appendChild(metaContentLanguage);
+
+const metaContentType = document.createElement('meta');
+metaContentType.setAttribute('http-equiv', 'Content-Type');
+metaContentType.setAttribute('content', 'text/html; charset=UTF-8');
+head.appendChild(metaContentType);
+
+document.head = head;
+
+const body = document.createElement('body');
+body.setAttribute('style', 'padding: 0px; margin:0px;');
+
+const metaReferrer = document.createElement('meta');
+metaReferrer.setAttribute('name', 'referrer');
+metaReferrer.setAttribute('content', 'no-referrer');
+body.appendChild(metaReferrer);
+
+const scriptJWPlayer = document.createElement('script');
+scriptJWPlayer.setAttribute('src', '//ssl.p.jwpcdn.com/player/v/8.25.8/jwplayer.js');
+body.appendChild(scriptJWPlayer);
+
+const scriptJWPlayerKey = document.createElement('script');
+scriptJWPlayerKey.textContent = 'jwplayer.key = "XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo";';
+body.appendChild(scriptJWPlayerKey);
+
+const divPlayer = document.createElement('div');
+divPlayer.setAttribute('id', 'player');
+body.appendChild(divPlayer);
+
+const scriptPlayerSetup = document.createElement('script');
+scriptPlayerSetup.textContent = `
+var player = jwplayer("player");
+player.setup({
+  playlist: [{
+    title: "@ikalmanager",
+    description: "",
+    sources: [{
+      file: 'https://linear018-gb-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_720_30/Live/channel(skysportsmix)/manifest_720.mpd',
+      drm: {
+        clearkey: {
+          keyId: "00052def539f4c65b1ddeb5ea4ea9003",
+          key: "4af118364d041875a8137c5839381cce"
+        }
+      }
+    }]
+  }],
+  width: "100%",
+  height: "100%",
+  autostart: true,
+  cast: {}
+});
+if (confirm("Join Our Telegram Channel @finallylivestreaming")) {
+  window.location.href = "https://t.me/FinallyliveStreaming";
+}
+`;
+body.appendChild(scriptPlayerSetup);
+
+document.body = body;
+</script>
