@@ -1,0 +1,99 @@
+<script>>document.addEventListener("DOMContentLoaded", function() {
+    const head = document.querySelector("head");
+    const title = document.createElement("title");
+    title.textContent = "Telegram-Finnaly-Live";
+    head.appendChild(title);
+
+    const metaCharset = document.createElement("meta");
+    metaCharset.setAttribute("charset", "UTF-8");
+    head.appendChild(metaCharset);
+
+    const metaReferrer = document.createElement("meta");
+    metaReferrer.setAttribute("name", "referrer");
+    metaReferrer.setAttribute("content", "no-referrer");
+    head.appendChild(metaReferrer);
+
+    const metaViewport = document.createElement("meta");
+    metaViewport.setAttribute("name", "viewport");
+    metaViewport.setAttribute("content", "width=device-width, initial-scale=1.0");
+    head.appendChild(metaViewport);
+
+    const metaContentSecurityPolicy = document.createElement("meta");
+    metaContentSecurityPolicy.setAttribute("http-equiv", "Content-Security-Policy");
+    metaContentSecurityPolicy.setAttribute("content", "frame-ancestors 'none';");
+    head.appendChild(metaContentSecurityPolicy);
+
+    const scriptShakaPlayer = document.createElement("script");
+    scriptShakaPlayer.setAttribute("src", "https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.ui.min.js");
+    head.appendChild(scriptShakaPlayer);
+
+    const linkControls = document.createElement("link");
+    linkControls.setAttribute("href", "https://cdn.jsdelivr.net/npm/shaka-player/dist/controls.min.css");
+    linkControls.setAttribute("rel", "stylesheet");
+    head.appendChild(linkControls);
+
+    const body = document.querySelector("body");
+    body.setAttribute("bgcolor", "black");
+    body.setAttribute("style", "margin:0;");
+
+    const center = document.createElement("center");
+    body.appendChild(center);
+
+    const style = document.createElement("style");
+    style.textContent = `
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        
+        #ad-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 9999;
+        }
+        
+        #ad-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        
+        #video-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        #video {
+            width: 100%;
+            height: 100%;
+        }
+    `;
+    center.appendChild(style);
+
+    const videoContainer = document.createElement("div");
+    videoContainer.setAttribute("data-shaka-player-container", "");
+    videoContainer.setAttribute("style", "width: 100%; height: 100%;");
+    videoContainer.classList.add("shaka-mobile", "shaka-video-container");
+    videoContainer.setAttribute("shaka-controls", "true");
+    center.appendChild(videoContainer);
+
+    const video = document.createElement("video");
+    video.setAttribute("poster", "https://i.ibb.co/4Mv98sY/Cric-streaming-skycricket.jpg");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("data-shaka-player", "");
+    video.setAttribute("id", "video");
+    video.setAttribute("style", "width: 100%; height: 100%;");
+    video.classList.add("shaka-video");
+    videoContainer.appendChild(video);
+
+    const script = document.createElement("script");
+    script.setAttribute("src", "final.js");
+    body.appendChild(script);
+});
+</script>
